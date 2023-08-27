@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import emailjs from '@emailjs/browser'
+import emailjs, { EmailJSResponseStatus } from '@emailjs/browser'
 
 @Component({
   selector: 'app-contact',
@@ -28,16 +28,6 @@ export class ContactComponent {
       })
       alert('Message has been sent');
       this.form.reset();
+      return response;
     };
-
-    reset() {
-      this.form.reset();
-    }
-    
-    // form: FormGroup = new FormControl({
-    // from_name: '',
-    // from_email: '',
-    // message: ''
-    // })
-
 }
