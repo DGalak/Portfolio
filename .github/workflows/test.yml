@@ -22,4 +22,4 @@ jobs:
       - name: Install Dependencies
         run: npm install --legacy-peer-deps
       - name: Run Tests
-        run: npm test
+        run: ng test --no-watch --no-progress --code-coverage --browsers=ChromeHeadlessCI
