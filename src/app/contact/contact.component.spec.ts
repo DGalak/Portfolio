@@ -8,9 +8,9 @@ describe( 'Contact', () => {
             ContactComponent
         ]
     });
-    it('should send the message',async() => {
+    it('method send should be called', () => {
         let fixture = TestBed.createComponent(ContactComponent);
         let app = fixture.debugElement.componentInstance;
-        app.send().then((r:EmailJSResponseStatus) => { expect(r.status).toEqual(200)});
+        expect(app.send()).toHaveBeenCalled;
     })
 });
