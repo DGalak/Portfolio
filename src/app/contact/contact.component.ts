@@ -28,6 +28,5 @@ export class ContactComponent {
       })
       alert('Message has been sent');
       this.form.reset();
-      return response;
     };
 }

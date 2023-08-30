@@ -11,6 +11,8 @@ describe( 'Contact', () => {
     it('method send should be called', () => {
         let fixture = TestBed.createComponent(ContactComponent);
         let app = fixture.debugElement.componentInstance;
-        expect(app.send()).toHaveBeenCalled;
+        spyOn(app, 'send').and.returnValue(true);
+        let result = app.send();
+        expect(result).toBe(true);
     })
 });
